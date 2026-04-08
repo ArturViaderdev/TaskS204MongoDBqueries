@@ -13,6 +13,7 @@ jobs:
       MONGO_CREDENTIAL: -u user -p pass --authenticationDatabase admin nyc
       DOCKER_CONTAINER:  mongo-evaluator
       MONGO_URL: mongodb://user:pass@mongo-evaluator:27017/nyc?authSource=admin
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
     - name: Checkout repository
@@ -22,7 +23,7 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '24'
     
     - name: Install Node.js dependencies
       run: npm install
