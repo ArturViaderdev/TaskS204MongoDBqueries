@@ -85,8 +85,8 @@ db.restaurants.find({"address.street":{$exists:false}},{_id:0});
 // 29. Seleccionar documents on el valor de `coordinate` és de tipus Double. Mostrar el name, restaurant_id i coordinades.
 db.restaurants.find({$or:[{"location.coordinates.0":{$type:"double"}},{"location.coordinates.1":{$type:"double"}}]},{_id:0,name:1,"location.coordinates":1});
 
-// 30. Mostrar restaurant_id, name i grade per restaurants amb marcador divisible per 7 (resta 0).
-db.restaurants.find({"grades.score":{$elemMatch:{$mod:[7,0]}}},{_id:0,name:1,"grades.grade":1}); //revisar
+// 30. Mostrar restaurant_id, name i grade per restaurants amb marcador divisible per 7 (resta 0). Pendent ---------------------
+db.restaurants.find({"grades.score":{$elemMatch:{$mod:[7,0]}}},{_id:0,name:1,"grades.grade":1});
 
 // 31. Trobar name, borough, longitud, latitud i cuisine per noms que contenen 'mon'.
 db.restaurants.find({name:{$regex:"mon"}},{_id:0,name:1,borough:1,"location.coordinates":1});
