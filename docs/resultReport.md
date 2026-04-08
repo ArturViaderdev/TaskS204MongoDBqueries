@@ -4,28 +4,13 @@
 - ✔️ OK - Query **[ 1 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 2 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"name":"Morris Park Bake Shop","restaurant_id":30075445}
-- **Actual:** {"name":"Morris Park Bake Shop"}
+- ✔️ OK - Query **[ 2 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 3 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"borough":"Bronx","cuisine":"Bakery","name":"Morris Park Bake Shop","restaurant_id":30075445}
-- **Actual:** {"borough":"Bronx","cuisine":"Bakery","name":"Morris Park Bake Shop"}
+- ✔️ OK - Query **[ 3 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 4 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"address":{},"borough":"Bronx","name":"Morris Park Bake Shop","restaurant_id":30075445}
-- **Actual:** {"address":{},"borough":"Bronx","name":"Morris Park Bake Shop"}
+- ✔️ OK - Query **[ 4 ]**
 
 ---
 - ✔️ OK - Query **[ 5 ]**
@@ -56,47 +41,22 @@
 - **Got:** 0
 
 ---
-- ❌ MISMATCH - Query **[ 14 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"borough":"Brooklyn","cuisine":"Delicatessen","name":"Wilken'S Fine Food","restaurant_id":40356483}
-- **Actual:** {"borough":"Brooklyn","cuisine":"Delicatessen","name":"Wilken'S Fine Food"}
+- ✔️ OK - Query **[ 14 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 15 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"borough":"Manhattan","cuisine":"American","name":"Pieces","restaurant_id":40399910}
-- **Actual:** {"borough":"Manhattan","cuisine":"American","name":"Pieces"}
+- ✔️ OK - Query **[ 15 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 16 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"borough":"Brooklyn","cuisine":"American","name":"Regina Caterers","restaurant_id":40356649}
-- **Actual:** {"borough":"Brooklyn","cuisine":"American","name":"Regina Caterers"}
+- ✔️ OK - Query **[ 16 ]**
 
 ---
 - ✔️ OK - Query **[ 17 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 18 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"borough":"Bronx","cuisine":"Bakery","name":"Morris Park Bake Shop","restaurant_id":30075445}
-- **Actual:** {"borough":"Bronx","cuisine":"Bakery","name":"Morris Park Bake Shop"}
+- ✔️ OK - Query **[ 18 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 19 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"borough":"Manhattan","cuisine":"Irish","name":"Dj Reynolds Pub And Restaurant","restaurant_id":30191841}
-- **Actual:** {"borough":"Manhattan","cuisine":"Irish","name":"Dj Reynolds Pub And Restaurant"}
+- ✔️ OK - Query **[ 19 ]**
 
 ---
 - ❌ MISMATCH - Query **[ 20 ]** Result does not match expected output.
@@ -132,42 +92,27 @@
 - ✔️ OK - Query **[ 27 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 28 ]** Result does not match expected output.
-
-
-🔢 Different result lengths: 
-- **Expected:** 3
-- **Got:** 2
+- ✔️ OK - Query **[ 28 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 29 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"location":{},"name":"Morris Park Bake Shop","restaurant_id":30075445}
-- **Actual:** {"location":{},"name":"Morris Park Bake Shop"}
+- ✔️ OK - Query **[ 29 ]**
 
 ---
 - ❌ MISMATCH - Query **[ 30 ]** Result does not match expected output.
 
 
-🔢 Different result lengths: 
-- **Expected:** 262
-- **Got:** 0
+🧩 Mismatch at position 0:
+- **Expected:** {"grades":[{},{},{},{},{}],"name":"Morris Park Bake Shop","restaurant_id":30075445}
+- **Actual:** {"grades":[{},{},{},{},{}],"name":"Morris Park Bake Shop"}
 
 ---
 - ❌ MISMATCH - Query **[ 31 ]** Result does not match expected output.
 
 
-🔢 Different result lengths: 
-- **Expected:** 10
-- **Got:** 7
+🧩 Mismatch at position 0:
+- **Expected:** {"borough":"Manhattan","cuisine":"American","location":{},"name":"Desmond'S Tavern"}
+- **Actual:** {"borough":"Manhattan","location":{},"name":"Desmond'S Tavern"}
 
 ---
-- ❌ MISMATCH - Query **[ 32 ]** Result does not match expected output.
-
-
-🔢 Different result lengths: 
-- **Expected:** 1
-- **Got:** 664
+- ✔️ OK - Query **[ 32 ]**
 
