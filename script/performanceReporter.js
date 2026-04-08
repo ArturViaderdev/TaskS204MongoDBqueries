@@ -7,6 +7,7 @@ const MONGO_URI = process.env.MONGO_URL;
 const DOCKER_CONTAINER = process.env.DOCKER_CONTAINER;
 const EXECUTION_STATS = `"executionStats"`;
 const mdFile = './docs/performanceReport.md';
+const FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true
 
 
 // Todo: Add more fields to the recommended indexes
