@@ -25,20 +25,29 @@
 - ✔️ OK - Query **[ 8 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 9 ]** Result does not match expected output.
+- ✔️ OK - Query **[ 9 ]**
 
-
-🔢 Different result lengths: 
-- **Expected:** 1
-- **Got:** 2
+---
+- ✔️ OK - Query **[ 10 ]**
 
 ---
 - ❌ MISMATCH - Query **[ 11 ]** Result does not match expected output.
 
 
-🔢 Different result lengths: 
-- **Expected:** 1
-- **Got:** 0
+🧩 Mismatch at position 0:
+- **Expected:** {"address":{},"borough":"Manhattan","cuisine":"Indian","grades":[{},{},{},{},{},{},{}],"location":{},"name":"Gandhi","restaurant_id":40381295}
+- **Actual:** {"_id":"69d7738e893e2bf7bfba4c93","address":{},"borough":"Manhattan","cuisine":"Indian","grades":[{},{},{},{},{},{},{}],"location":{},"name":"Gandhi","restaurant_id":40381295}
+
+---
+- ❌ MISMATCH - Query **[ 12 ]** Result does not match expected output.
+
+
+🧩 Mismatch at position 0:
+- **Expected:** {"address":{},"borough":"Manhattan","cuisine":"Indian","grades":[{},{},{},{},{},{},{}],"location":{},"name":"Gandhi","restaurant_id":40381295}
+- **Actual:** {"_id":"69d7738e893e2bf7bfba4c93","address":{},"borough":"Manhattan","cuisine":"Indian","grades":[{},{},{},{},{},{},{}],"location":{},"name":"Gandhi","restaurant_id":40381295}
+
+---
+- ✔️ OK - Query **[ 13 ]**
 
 ---
 - ✔️ OK - Query **[ 14 ]**
@@ -75,12 +84,13 @@
 - **Got:** 390
 
 ---
-- ❌ MISMATCH - Query **[ 22 ]** Result does not match expected output.
+- ✔️ OK - Query **[ 22 ]**
 
+---
+- ✔️ OK - Query **[ 23 ]**
 
-🧩 Mismatch at position 0:
-- **Expected:** {"grades":[{},{},{},{},{},{}],"name":"Don Filippo Restaurant","restaurant_id":40372417}
-- **Actual:** {"address":{},"borough":"Manhattan","cuisine":"Italian","grades":[{},{},{},{},{},{}],"location":{},"name":"Don Filippo Restaurant","restaurant_id":40372417}
+---
+- ✔️ OK - Query **[ 24 ]**
 
 ---
 - ✔️ OK - Query **[ 25 ]**
