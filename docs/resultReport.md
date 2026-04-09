@@ -31,20 +31,10 @@
 - ✔️ OK - Query **[ 10 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 11 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"address":{},"borough":"Manhattan","cuisine":"Indian","grades":[{},{},{},{},{},{},{}],"location":{},"name":"Gandhi","restaurant_id":40381295}
-- **Actual:** {"_id":"69d7738e893e2bf7bfba4c93","address":{},"borough":"Manhattan","cuisine":"Indian","grades":[{},{},{},{},{},{},{}],"location":{},"name":"Gandhi","restaurant_id":40381295}
+- ✔️ OK - Query **[ 11 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 12 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"address":{},"borough":"Manhattan","cuisine":"Indian","grades":[{},{},{},{},{},{},{}],"location":{},"name":"Gandhi","restaurant_id":40381295}
-- **Actual:** {"_id":"69d7738e893e2bf7bfba4c93","address":{},"borough":"Manhattan","cuisine":"Indian","grades":[{},{},{},{},{},{},{}],"location":{},"name":"Gandhi","restaurant_id":40381295}
+- ✔️ OK - Query **[ 12 ]**
 
 ---
 - ✔️ OK - Query **[ 13 ]**
@@ -108,20 +98,10 @@
 - ✔️ OK - Query **[ 29 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 30 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"grades":[{},{},{},{},{}],"name":"Morris Park Bake Shop","restaurant_id":30075445}
-- **Actual:** {"grades":[{},{},{},{},{}],"name":"Morris Park Bake Shop"}
+- ✔️ OK - Query **[ 30 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 31 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"borough":"Manhattan","cuisine":"American","location":{},"name":"Desmond'S Tavern"}
-- **Actual:** {"borough":"Manhattan","location":{},"name":"Desmond'S Tavern"}
+- ✔️ OK - Query **[ 31 ]**
 
 ---
 - ✔️ OK - Query **[ 32 ]**
