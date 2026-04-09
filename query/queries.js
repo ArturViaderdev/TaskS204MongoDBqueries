@@ -32,7 +32,7 @@ db.restaurants.find({"location.coordinates.0" :{$lt:-65.754168}});
 db.restaurants.find({$and:[{"cuisine":"American","grades":{$elemMatch:{"score":{ $gt:70}}},"location.coordinates.0": { $lt: -65.754168 }}]});
 
 // 12. El mateix que l'anterior però sense usar operador $and.
-db.restaurants.find({"cuisine":"American","grades":{$elemMatch:{"score":{ $gt:70}}},"location.coordinates.0": { $lt: -65.754168 }});
+db.restaurants.find({"cuisine":{ $nin:["American"]},"grades":{$elemMatch:{"score":{$gt:70}}},"location.coordinates.0":{$lt:-65.754168}});
 
 // 13. Trobar restaurants que no són 'American', grau 'A', i no són de Brooklyn. Ordenats per cuisine descendent.
 db.restaurants.find({"cuisine":{$nin : ["American"]},"grades":{$elemMatch:{"grade":"A"}},"borough":{$nin:["Brooklyn"]}},{_id:0}).sort({"cuisine":-1});
