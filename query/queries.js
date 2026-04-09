@@ -2,13 +2,13 @@
 db.restaurants.find({},{_id:0});
 
 // 2. Mostrar el restaurant_id i name per tots els documents en la col·lecció Restaurants.
-db.restaurants.find({}, {_id:0,restaurant_id:1,name:1});
+db.restaurants.find({},{_id:0,restaurant_id:1,name:1});
 
 // 3. Mostrar el restaurant_id, name, borough i cuisine.
-db.restaurants.find({}, {_id:0,restaurant_id:1,name:1,borough:1,cuisine:1});
+db.restaurants.find({},{_id:0,restaurant_id:1,name:1,borough:1,cuisine:1});
 
 // 4. Mostrar restaurant_id, name, borough i zip code.
-db.restaurants.find({}, {_id:0,restaurant_id:1,name:1,borough:1,"address.zipcode":1});
+db.restaurants.find({},{_id:0,restaurant_id:1,name:1,borough:1,"address.zipcode":1});
 
 // 5. Mostrar tots els restaurants que estan en el Bronx.
 db.restaurants.find({"borough":"Bronx"},{_id:0});
@@ -26,10 +26,10 @@ db.restaurants.find({"grades":{$elemMatch:{"score":{$gt:90}}}},{_id:0});
 db.restaurants.find({"grades":{$elemMatch:{"score":{$gt:80,$lt:100}}}},{_id:0});
 
 // 10. Trobar els restaurants amb longitud menor que -95.754168.
-db.restaurants.find({"location.coordinates.0" :{$lt:-65.754168}}); 
+db.restaurants.find({"location.coordinates.0":{$lt:-95.754168}}); 
 
 // 11. Trobar restaurants que no preparen 'American', amb qualificació > 70 i longitud < -65.754168
-db.restaurants.find({$and:[{"cuisine":"American","grades":{$elemMatch:{"score":{ $gt:70}}},"location.coordinates.0": { $lt: -65.754168 }}]});
+db.restaurants.find({$and:[{"cuisine":{$nin:["American"]}},{"grades":{$elemMatch:{"score":{$gt:70}}}},{"location.coordinates.0":{$lt:-65.754168}}]});
 
 // 12. El mateix que l'anterior però sense usar operador $and.
 db.restaurants.find({"cuisine":{ $nin:["American"]},"grades":{$elemMatch:{"score":{$gt:70}}},"location.coordinates.0":{$lt:-65.754168}});
@@ -56,7 +56,7 @@ db.restaurants.find({borough:{$in:["Staten Island","Queens","Bronx","Brooklyn"]}
 db.restaurants.find({borough:{$nin:["Staten Island","Queens","Bronx","Brooklyn"]}},{_id:0,restaurant_id:1,name:1,borough:1,cuisine:1});
 
 // 20. Trobar restaurant_id, name, borough i cuisine amb marcador no superior a 10.
-db.restaurants.find({"grades.score":{$lt:10}},{_id:0,restaurant_id:1,name:1,borough:1});
+db.restaurants.find({"grades.score":{$lt:10}},{_id:0,restaurant_id:1,name:1,borough:1,cuisine:1});
 
 // 21. Trobar restaurants que preparen peix, no 'American' ni 'Chinees', o nom comença amb 'Wil'.
 db.restaurants.find({$or:[{cuisine:{$nin:["American","Chinese"]}},{name:{$regex:"^Wil"}}]},{_id:0});
@@ -65,10 +65,10 @@ db.restaurants.find({$or:[{cuisine:{$nin:["American","Chinese"]}},{name:{$regex:
 db.restaurants.find({"grades":{$elemMatch:{"grade":"A","score":11,"date":ISODate("2014-08-11T00:00:00Z")}}},{_id:0,restaurant_id:1,name:1,grades:1});
 
 // 23. Trobar restaurant_id, name i grades on el 2n element té grau "A", score 9 i data "2014-08-11T00:00:00Z".
-db.restaurants.find({"grades":{"grades.grade.1":"A","grades.grade.1.score":9,"date":ISODate("2014-08-11T00:00:00Z")}},{_id:0,restaurant_id:1,name:1,grades:1});
+db.restaurants.find({"grades":{"grades.1.grade":"A","grades.1.score":9,"date":ISODate("2014-08-11T00:00:00Z")}},{_id:0,restaurant_id:1,name:1,grades:1});
 
 // 24. Trobar el restaurant_id, name, street, zipcode i coordenades dels restaurants a menys de 5 km de [-74, 40.7].
-db.restaurants.find({"location":{$near: {$geometry:{type:"Point",coordinates:[-74, 40.7]},$maxDistance:5000}}},{_id:0,restaurant_id:1,name:1,"address.street":1,"address.zipcode":1,"location.coordinates":1});
+db.restaurants.find({"location":{$near:{$geometry:{type:"Point",coordinates:[-74, 40.7]},$maxDistance:5000}}},{_id:0,restaurant_id:1,name:1,"address.street":1,"address.zipcode":1,"location.coordinates":1});
 
 // 25. Ordenar els noms dels restaurants en ordre ascendent, mostrant totes les columnes.
 db.restaurants.find({},{_id:0}).sort({name:1});
@@ -86,7 +86,7 @@ db.restaurants.find({$or:[{"address.street":{$exists:false}},{"address.street":"
 db.restaurants.find({$or:[{"location.coordinates.0":{$type:"double"}},{"location.coordinates.1":{$type:"double"}}]},{_id:0,restaurant_id:1,name:1,"location.coordinates":1});
 
 // 30. Mostrar restaurant_id, name i grade per restaurants amb marcador divisible per 7 (resta 0).
-db.restaurants.find({"grades":{$elemMatch:{"score":{ $mod: [7, 0] }}}},{_id: 0,name: 1,"grades.grade":1});
+db.restaurants.find({"grades":{$elemMatch:{"score":{$mod:[7,0]}}}},{_id:0,name:1,"grades.grade":1});
 
 // 31. Trobar name, borough, longitud, latitud i cuisine per noms que contenen 'mon'.
 db.restaurants.find({name:{$regex:"mon",$options:"i"}},{_id:0,name:1,borough:1,"location.coordinates":1});
